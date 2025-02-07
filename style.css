@@ -4,6 +4,9 @@
   box-sizing: border-box;
   font-family: Montserrat;
 }
+header {
+  background-color: #f6f6f6;
+}
 .navbar {
   position: relative;
   display: flex;
@@ -52,9 +55,11 @@
 .signInUp button:hover {
   background-color: #007984;
   color: white;
+  transition: all 0.4s ease-in;
 }
 section {
   margin-bottom: 100px;
+  background-color: #f6f6f6;
 }
 .wholeMid {
   display: flex;
@@ -104,8 +109,8 @@ section {
 }
 .getStarted {
   padding: 15px 35px;
-  color: white;
-  background-color: #007984;
+  background-color: white;
+  color: #007984;
   border: 0px;
   font-size: 20px;
   cursor: pointer;
@@ -113,6 +118,11 @@ section {
   font-weight: 500;
   width: fit-content;
   margin-bottom: 50px;
+}
+.getStarted:hover {
+  color: white;
+  background-color: #007984;
+  transition: all 0.4s ease-in;
 }
 ul {
   display: flex;
@@ -158,14 +168,14 @@ li:before {
 .numbers {
   display: flex;
   width: 85%;
+  justify-content: space-evenly;
 }
 .indiNumbers {
-  width: calc(25% - 20px);
+  width: calc(25% - 25px);
   display: flex;
   flex-direction: column;
   padding: 20px;
   box-shadow: 0px -10px 50px 1px rgba(0, 0, 0, 0.264);
-  margin-right: 20px;
 }
 .primaryColor h2 {
   color: #007984;
