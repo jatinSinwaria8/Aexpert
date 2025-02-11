@@ -5,6 +5,10 @@
   box-sizing: border-box;
   font-family: Montserrat;
 }
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
 /* The header is given a background color of #f6f6f6 and the font color is set to #007984. */
 header {
   background-color: #f6f6f6;
@@ -22,6 +26,9 @@ header {
 /* div containing all navlinks */
 .navLinks {
   display: flex;
+}
+.hamburger {
+  display: none;
 }
 /* Individual link styling */
 .indiLink {
@@ -110,12 +117,15 @@ section {
   height: 6px;
   background-color: #ffbb0b;
 }
+.hide {
+  display: none;
+}
 .yellowLineText {
   /* text next to yellow line */
   font-size: 18px;
   font-weight: 550;
   color: #007984;
-  margin-left: 20px;
+  margin: 0 20px;
 }
 .mainHeading {
   /* Main heading styling */
@@ -123,7 +133,7 @@ section {
   font-weight: 550;
   letter-spacing: -3px;
   text-transform: uppercase;
-  font-size: 80px;
+  font-size: 78px;
 }
 /* paragraph under the heading styling */
 .underHeading {
@@ -143,7 +153,7 @@ section {
   border-radius: 50px;
   font-weight: 500;
   width: fit-content;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   border: 2px solid #007984;
 }
 /* get started button hover effect */
@@ -202,13 +212,13 @@ li:before {
 .numbers {
   display: flex;
   /* width 85% of the total width of lowermid  */
-  width: 85%;
+  width: 90%;
   justify-content: space-evenly;
 }
 /* individual numbers section stylings */
 .indiNumbers {
   /* width 25% - 25px for the margin space of the total width of numbers div  */
-  width: calc(25% - 25px);
+  width: calc(25% - 45px);
   display: flex;
   flex-direction: column;
   /* padding from all sides 20px */
@@ -219,16 +229,16 @@ li:before {
 }
 .indiNumbers h2 {
   /* individual numbers heading stylings */
-  font-size: 38px;
+  font-size: 32px;
   font-family: "Arial Narrow";
   font-weight: 800;
   text-transform: uppercase;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   color: #007984;
 }
 .indiNumbers p {
   /* individual numbers paragraph stylings */
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   margin-bottom: 25px;
   color: #007984;
@@ -254,24 +264,18 @@ li:before {
   color: white;
 }
 /* media query for screen size XXL */
-@media (min-width: 1400px) {
+
+@media (max-width: 1400px) {
   .container {
-    max-width: 1400px;
-    margin: 0 auto;
-  }
-}
-/* media query for screen size XL */
-@media (max-width: 1399px) {
-  .container {
-    max-width: 1200px;
+    max-width: 1140px;
     margin: 0 auto;
   }
   .mainHeading {
     font-size: 65px;
   }
   .underHeading {
-    font-size: 16px;
-    margin: 30px 0px;
+    font-size: 14px;
+    margin: 20px 0px;
   }
   .getStarted {
     font-size: 16px;
@@ -279,21 +283,23 @@ li:before {
     margin-bottom: 30px;
   }
   li {
-    font-size: 16px;
+    font-size: 14px;
   }
   .indiNumbers h2 {
-    font-size: 30px;
-    margin-bottom: 30px;
+    font-size: 24px;
+    margin-bottom: 20px;
   }
   .indiNumbers p {
-    font-size: 14px;
+    font-size: 12px;
     margin-bottom: 20px;
   }
 }
+/* media query for screen size XL */
+
 /* media query for screen size L */
-@media (max-width: 1199px) {
+@media (max-width: 1200px) {
   .container {
-    max-width: 992px;
+    max-width: 960px;
     margin: 0 auto;
   }
   .indiLink {
@@ -315,33 +321,39 @@ li:before {
     font-size: 14px;
   }
   .mainHeading {
-    font-size: 56px;
+    font-size: 52px;
   }
   .underHeading {
     font-size: 12px;
-    margin: 20px 0px;
+    margin: 15px 0px;
   }
   .getStarted {
     font-size: 14px;
     padding: 10px 20px;
     margin-bottom: 20px;
   }
+  ul {
+    margin-bottom: 10px;
+  }
   li {
     font-size: 12px;
   }
+  .indiNumbers {
+    padding: 15px;
+  }
   .indiNumbers h2 {
-    font-size: 18px;
-    margin-bottom: 25px;
+    font-size: 22px;
+    margin-bottom: 24px;
   }
   .indiNumbers p {
     font-size: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
   }
 }
 /* media query for screen size M */
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .container {
-    max-width: 768px;
+    max-width: 720px;
     margin: 0 auto;
   }
   .indiLink {
@@ -354,9 +366,10 @@ li:before {
   .signInUp button {
     padding: 10px 22px;
     font-size: 12px;
+    margin-left: 10px;
   }
   .midContent {
-    padding-top: 50px;
+    padding-top: 40px;
     padding-right: 20px;
   }
   .midImage {
@@ -370,36 +383,37 @@ li:before {
     font-size: 12px;
   }
   .mainHeading {
-    font-size: 48px;
+    font-size: 46px;
   }
   .underHeading {
     font-size: 10px;
-    margin: 16px 0px;
+    margin: 14px 0px;
   }
   .getStarted {
-    font-size: 12px;
+    font-size: 10px;
     padding: 9px 16px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
   ul {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
   li {
-    font-size: 10px;
+    font-size: 8px;
   }
   li::before {
     font-size: 12px;
   }
   .indiNumbers {
-    padding: 11px;
+    padding: 10px;
+    width: calc(25% - 25px);
   }
   .indiNumbers h2 {
-    font-size: 16px;
-    margin-bottom: 18px;
+    font-size: 14px;
+    margin-bottom: 16px;
   }
   .indiNumbers p {
-    font-size: 8px;
-    margin-bottom: 15px;
+    font-size: 10px;
+    margin-bottom: 12px;
   }
   .indiNumbers .yellowLine {
     height: 3px;
@@ -407,3 +421,301 @@ li:before {
   }
 }
 /* media query for screen size S */
+@media (max-width: 768px) {
+  .container {
+    max-width: 540px;
+    margin: 0 auto;
+  }
+  .navbar {
+    position: relative;
+  }
+  .hamburger {
+    z-index: 2;
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .line {
+    background-color: #007984;
+    height: 5px;
+    width: 38px;
+    border-radius: 50px;
+    transition: 0.3s ease-in-out;
+  }
+  .x1 {
+    transform: translateY(10px) rotate(45deg);
+    transition: 0.3s ease-in-out;
+  }
+  .x2 {
+    opacity: 0%;
+    transition: 0.3s ease-in-out;
+  }
+  .x3 {
+    transform: translateY(-10px) rotate(-45deg);
+    transition: 0.3s ease-in-out;
+  }
+
+  .linkWrapperShow {
+    position: fixed;
+    background-color: #007984;
+    top: 0;
+    z-index: 1;
+    height: 100dvh;
+    width: 50dvw;
+    left: -50%;
+    transform: translateX(95%);
+    transition: 0.3s ease-in-out;
+  }
+  .linkWrapper {
+    position: fixed;
+    background-color: #007984;
+    top: 0;
+    z-index: 1;
+    height: 100dvh;
+    width: 50dvw;
+    left: -101%;
+    transition: 0.3s ease-in-out;
+  }
+  .navLinks {
+    padding-top: 100px;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .indiLink {
+    font-size: 26px;
+    color: white;
+  }
+  .signInUp {
+    margin-left: auto;
+  }
+  .signInUp button {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+  .midSection {
+    flex-direction: column;
+  }
+  .midContent {
+    width: 100%;
+    padding: 0;
+  }
+  .midImage {
+    width: 100%;
+    padding: 20px 90px;
+  }
+  .hide {
+    display: block;
+  }
+  .yellowLine {
+    width: 32%;
+  }
+  .topOfHeading {
+    justify-content: space-between;
+  }
+  .mainHeading {
+    text-align: center;
+  }
+  .underHeading {
+    font-size: 14px;
+    text-align: justify;
+    margin: 20px 0;
+  }
+  .getStarted {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    font-size: 16px;
+    padding: 10px 25px;
+  }
+  ul {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+  }
+  li {
+    font-size: 14px;
+  }
+  .numbers {
+    flex-wrap: wrap;
+    padding: 0 20px;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .indiNumbers {
+    width: calc(50% - 10px);
+    margin: 10px 0;
+    padding: 20px;
+  }
+  .indiNumbers h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .indiNumbers p {
+    font-size: 12px;
+    margin-bottom: 18px;
+  }
+  .indiNumbers .yellowLine {
+    height: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    max-width: 310px;
+    margin: 0 auto;
+  }
+  .navbar {
+    position: relative;
+    padding: 16px 0 8px 0;
+  }
+  .hamburger {
+    z-index: 2;
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .line {
+    background-color: #007984;
+    height: 5px;
+    width: 38px;
+    border-radius: 50px;
+    transition: 0.3s ease-in-out;
+  }
+  .x1 {
+    transform: translateY(10px) rotate(45deg);
+    transition: 0.3s ease-in-out;
+  }
+  .x2 {
+    opacity: 0%;
+    transition: 0.3s ease-in-out;
+  }
+  .x3 {
+    transform: translateY(-10px) rotate(-45deg);
+    transition: 0.3s ease-in-out;
+  }
+
+  .linkWrapperShow {
+    position: fixed;
+    background-color: #007984;
+    top: 0;
+    z-index: 1;
+    height: 100dvh;
+    width: 50dvw;
+    left: -50%;
+    transform: translateX(95%);
+    transition: 0.3s ease-in-out;
+  }
+  .linkWrapper {
+    position: fixed;
+    background-color: #007984;
+    top: 0;
+    z-index: 1;
+    height: 100dvh;
+    width: 50dvw;
+    left: -101%;
+    transition: 0.3s ease-in-out;
+  }
+  .navLinks {
+    padding-top: 80px;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .indiLink {
+    font-size: 18px;
+    color: white;
+  }
+  .signInUp {
+    margin-left: auto;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+  .signInUp button {
+    padding: 6px 16px;
+    font-size: 8px;
+    margin-left: 10px;
+  }
+  .upperMid {
+    width: 100%;
+  }
+  .midSection {
+    flex-direction: column;
+  }
+  .midContent {
+    width: 100%;
+    padding: 0;
+  }
+  .midImage {
+    width: 100%;
+    padding: 10px;
+  }
+  .hide {
+    display: block;
+  }
+  .yellowLine {
+    width: 22%;
+  }
+  .topOfHeading {
+    justify-content: space-between;
+  }
+  .mainHeading {
+    text-align: center;
+    font-size: 36px;
+    letter-spacing: normal;
+  }
+  .underHeading {
+    font-size: 11px;
+    text-align: justify;
+    margin: 20px 0;
+  }
+  .getStarted {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    font-size: 14px;
+    padding: 8px 20px;
+  }
+  ul {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+  }
+  li {
+    margin-right: 10px;
+    font-size: 10px;
+  }
+  .lowerMid {
+    width: 100%;
+  }
+  .numbers {
+    flex-wrap: wrap;
+    padding: 0 20px;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .indiNumbers {
+    width: calc(50% - 5px);
+    margin: 10px 0;
+    padding: 10px;
+  }
+  .indiNumbers h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .indiNumbers p {
+    font-size: 8px;
+    margin-bottom: 18px;
+  }
+  .indiNumbers .yellowLine {
+    height: 5px;
+    margin-bottom: 5px;
+  }
+}
