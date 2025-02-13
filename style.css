@@ -1,10 +1,21 @@
 /* universal selector to define the margin and padding to 0 and box-sizing to border-box. Also, the font-family is set to Montserrat. */
+@font-face {
+  font-family: Montserrat;
+  src: url(Montserrat-Regular.ttf);
+}
+
+@font-face {
+  font-family: ArialNarrow;
+  src: url(arialnarrow.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Montserrat;
 }
+/* container for max screen size */
 .container {
   max-width: 1320px;
   margin: 0 auto;
@@ -27,6 +38,7 @@ header {
 .navLinks {
   display: flex;
 }
+/* hamburger button initally display none */
 .hamburger {
   display: none;
 }
@@ -129,7 +141,7 @@ section {
 }
 .mainHeading {
   /* Main heading styling */
-  font-family: "Arial Narrow";
+  font-family: ArialNarrow;
   font-weight: 550;
   letter-spacing: -3px;
   text-transform: uppercase;
@@ -230,7 +242,7 @@ li:before {
 .indiNumbers h2 {
   /* individual numbers heading stylings */
   font-size: 32px;
-  font-family: "Arial Narrow";
+  font-family: ArialNarrow;
   font-weight: 800;
   text-transform: uppercase;
   margin-bottom: 30px;
@@ -262,6 +274,18 @@ li:before {
   /* individual numbers p Hover effect */
   transition: all 0.4s ease-in;
   color: white;
+}
+.x1 {
+  transform: translateY(10px) rotate(45deg);
+  transition: 0.3s ease-in-out;
+}
+.x2 {
+  opacity: 0%;
+  transition: 0.3s ease-in-out;
+}
+.x3 {
+  transform: translateY(-10px) rotate(-45deg);
+  transition: 0.3s ease-in-out;
 }
 /* media query for screen size XXL */
 
@@ -443,18 +467,6 @@ li:before {
     border-radius: 50px;
     transition: 0.3s ease-in-out;
   }
-  .x1 {
-    transform: translateY(10px) rotate(45deg);
-    transition: 0.3s ease-in-out;
-  }
-  .x2 {
-    opacity: 0%;
-    transition: 0.3s ease-in-out;
-  }
-  .x3 {
-    transform: translateY(-10px) rotate(-45deg);
-    transition: 0.3s ease-in-out;
-  }
 
   .linkWrapperShow {
     position: fixed;
@@ -564,7 +576,7 @@ li:before {
 
 @media (max-width: 576px) {
   .container {
-    max-width: 310px;
+    max-width: 300px;
     margin: 0 auto;
   }
   .navbar {
@@ -583,18 +595,6 @@ li:before {
     height: 5px;
     width: 38px;
     border-radius: 50px;
-    transition: 0.3s ease-in-out;
-  }
-  .x1 {
-    transform: translateY(10px) rotate(45deg);
-    transition: 0.3s ease-in-out;
-  }
-  .x2 {
-    opacity: 0%;
-    transition: 0.3s ease-in-out;
-  }
-  .x3 {
-    transform: translateY(-10px) rotate(-45deg);
     transition: 0.3s ease-in-out;
   }
 
@@ -626,7 +626,7 @@ li:before {
     gap: 20px;
   }
   .indiLink {
-    font-size: 18px;
+    font-size: 14px;
     color: white;
   }
   .signInUp {
@@ -708,11 +708,11 @@ li:before {
   }
   .indiNumbers h2 {
     font-size: 18px;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
   .indiNumbers p {
     font-size: 8px;
-    margin-bottom: 18px;
+    margin-bottom: 14px;
   }
   .indiNumbers .yellowLine {
     height: 5px;

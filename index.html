@@ -9,22 +9,35 @@
 
     <script>
       $(document).ready(function () {
+        // event listner listning to the click on hamburger menu
         $(".hamburger").click(function () {
+          // if the link wrapper menu containing all navigation links is shown then hide them and vice-versa
+
           if ($("#navigation").hasClass("linkWrapperShow")) {
+            // removing wrapper class
             $("#navigation").removeClass("linkWrapperShow");
+            // adding the normal class where display is none
             $("#navigation").addClass("linkWrapper");
+            // changing the background color of hamburger button line to cyan
             $(".line").css({ "background-color": "#007984" });
+            // removing the x forming classes for hamburger button lines
             $("#first").removeClass("x1");
             $("#second").removeClass("x2");
             $("#third").removeClass("x3");
+            // changing the hamburger button lines to staticly positioned
             $(".hamburger").css({ position: "static" });
           } else {
+            // adding wrapper class
             $("#navigation").removeClass("linkWrapper");
+            // removing the normal class where display is none
             $("#navigation").addClass("linkWrapperShow");
+            // adding the x forming classes for hamburger button lines
             $("#first").addClass("x1");
             $("#second").addClass("x2");
             $("#third").addClass("x3");
+            // changing the background color of hamburger button line to white
             $(".line").css({ "background-color": "white" });
+            // changing the hamburger button lines to fixed positioned
             $(".hamburger").css({ position: "fixed" });
           }
         });
@@ -38,7 +51,9 @@
         <!-- container for max width according to screen size -->
         <div class="navbar">
           <!-- Navbar containing Title "Aexpert", links, sign in and sign up buttons -->
+
           <div class="hamburger">
+            <!-- hamburger button containing 3 lines -->
             <span id="first" class="line"></span>
             <span id="second" class="line"></span>
             <span id="third" class="line"></span>
