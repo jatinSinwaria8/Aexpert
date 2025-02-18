@@ -1,12 +1,12 @@
 /* universal selector to define the margin and padding to 0 and box-sizing to border-box. Also, the font-family is set to Montserrat. */
 @font-face {
   font-family: Montserrat;
-  src: url(Montserrat-Regular.ttf);
+  src: url(fonts/Montserrat-Regular.ttf);
 }
 
 @font-face {
   font-family: ArialNarrow;
-  src: url(arialnarrow.ttf);
+  src: url(fonts/arialnarrow.ttf);
 }
 
 * {
